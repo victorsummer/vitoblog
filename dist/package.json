@@ -5,6 +5,6 @@
  "author": "Vito Ao",
  "private": true,
  "scripts": {
-   "postinstall": "npm install express && npm install marked"
+   "postinstall": "npm install express && npm install marked && npm install connect-history-api-fallback"
  }
 }

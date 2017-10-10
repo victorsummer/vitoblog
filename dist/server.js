@@ -4,6 +4,8 @@ var marked = require('marked');
 var fs = require('fs');
 var path = require('path');
 var serveStatic = require('serve-static');
+var history = require('connect-history-api-fallback');
+app.use(history());
 app.use(serveStatic(__dirname));
 marked.setOptions({
 	renderer: new marked.Renderer(),
