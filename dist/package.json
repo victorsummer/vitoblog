@@ -1,0 +1,10 @@
+{
+ "name": "vitoblog",
+ "version": "1.0.0",
+ "description": "personal blog",
+ "author": "Vito Ao",
+ "private": true,
+ "scripts": {
+   "postinstall": "npm install express"
+ }
+}
