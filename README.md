@@ -1,6 +1,6 @@
 # vitoblog
 
-> A Vue.js project
+> Personal blog based upon Vue and NodeJS
 
 ## Build Setup
 
@@ -16,6 +16,10 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
+
+# deployment for Heroku
+npm run deploy
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Please visit my website for intuitive feelings.
+
