@@ -3,6 +3,8 @@ var app = express();
 var marked = require('marked');
 var fs = require('fs');
 var path = require('path');
+var serveStatic = require('serve-static');
+app.use(serveStatic(__dirname));
 marked.setOptions({
 	renderer: new marked.Renderer(),
 	gfm: true,
