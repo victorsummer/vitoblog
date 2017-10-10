@@ -42,11 +42,11 @@ export default {
   methods: {
     rollDown: function () {
       this.state = 'roll-down'
-      Cookies.set('scrollState', 'roll-down')
+      Cookies.set('scrollState', 'roll-down', { expires: 7 })
     },
     rollUp: function () {
       this.state = 'roll-up'
-      Cookies.set('scrollState', 'roll-up')
+      Cookies.set('scrollState', 'roll-up', { expires: 7 })
     }
   },
   components: {}
