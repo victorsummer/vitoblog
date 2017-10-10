@@ -7,9 +7,9 @@
         <h1>Vito's Blog</h1>
         <h3>The only thing standing between you and your dreams is ... reluctance.</h3>
         <p class="socials">
-          <a href="https://github.com/Lee-Cloud" target="_blank" class='icon github'></a>
-          <a href="http://weibo.com/2808915224" target="_blank" class='icon sina'></a>
-          <a href="https://twitter.com/dangerous_cl"  target="_blank" class='icon twitter'></a>
+          <a href="https://github.com/victorsummer" target="_blank" class='icon github'></a>
+          <a href="https://www.linkedin.com/in/vito-ao5006757b" target="_blank" class='icon linkedin'></a>
+          <a href="https://twitter.com/ao_vito"  target="_blank" class='icon twitter'></a>
         </p>
       </div>
       <i class="icon-down" v-on:click="rollDown"></i>
@@ -137,8 +137,8 @@ export default {
  p.socials > a.github {
    background-image: url('./assets/github-10-xxl.png');
  }
- p.socials > a.sina {
-   background-image: url('./assets/sina-logo.png');
+ p.socials > a.linkedin {
+   background-image: url('./assets/linkedin-logo.jpg');
  }
  p.socials > a.twitter {
    background-image: url('./assets/Twitter-logo.png');
