@@ -27,11 +27,13 @@
 </template>
 
 <script>
+import * as Cookies from 'js-cookie'
+
 export default {
   name: 'app',
   data () {
     return {
-      state: ''
+      state: Cookies.get('scrollState')
     }
   },
   created(){},
@@ -40,9 +42,11 @@ export default {
   methods: {
     rollDown: function () {
       this.state = 'roll-down'
+      Cookies.set('scrollState', 'roll-down')
     },
     rollUp: function () {
       this.state = 'roll-up'
+      Cookies.set('scrollState', 'roll-up')
     }
   },
   components: {}
