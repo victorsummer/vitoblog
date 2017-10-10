@@ -4,7 +4,7 @@ var marked = require('marked');
 var fs = require('fs');
 var path = require('path');
 var serveStatic = require('serve-static');
-app.use(serveStatic(__dirname));
+app.use(serveStatic(path.join(__dirname, '/dist')))
 marked.setOptions({
 	renderer: new marked.Renderer(),
 	gfm: true,
