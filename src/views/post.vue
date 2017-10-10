@@ -2,7 +2,7 @@
   <div>
     <div class="post">
       <h3 class="post-title">{{$route.params.filename}}</h3>
-      <p class="datetime">发表于：{{Mtime}}</p>
+      <p class="datetime">{{Mtime}}</p>
       <div class="content" v-html="content"></div>
       <scrollTop></scrollTop>
     </div>
