@@ -3,8 +3,6 @@ var app = express();
 var marked = require('marked');
 var fs = require('fs');
 var path = require('path');
-var serveStatic = require('serve-static');
-app.use(serveStatic(path.join(__dirname, '/dist')))
 marked.setOptions({
 	renderer: new marked.Renderer(),
 	gfm: true,
@@ -15,7 +13,7 @@ marked.setOptions({
 	smartLists: true,
 	smartypants: false
 });
-app.use(express.static('public',{maxAge:12*60*60*24*30}));
+app.use(express.static(__dirname + '/public',{maxAge:12*60*60*24*30}));
 app.all('*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     // res.header("Access-Control-Allow-Headers", "X-Requested-With");
