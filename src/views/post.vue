@@ -22,7 +22,7 @@ export default {
     }
   },
   created () {
-    this.$http.get('http://localhost:3000/api/blog/post?file='+this.$route.params.filename+'.md').then((res) => {
+    this.$http.get('/api/blog/post?file='+this.$route.params.filename+'.md').then((res) => {
       this.content = res.data.content;
       this.Mtime = res.data.Mtime;
     })

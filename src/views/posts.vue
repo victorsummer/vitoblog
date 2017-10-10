@@ -22,7 +22,7 @@ export default {
     }
   },
   created () {
-    this.$http.get('http://localhost:3000/api/blog/posts').then((res) => {
+    this.$http.get('/api/blog/posts').then((res) => {
       this.posts = res.data;
     })
   },
