@@ -142,7 +142,7 @@ export default {
    background-image: url('./assets/github-10-xxl.png');
  }
  p.socials > a.linkedin {
-   background-image: url('./assets/linkedin-logo.jpg');
+   background-image: url('./assets/linkedin-logo.png');
  }
  p.socials > a.twitter {
    background-image: url('./assets/Twitter-logo.png');
