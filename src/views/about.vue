@@ -4,7 +4,7 @@
       <h1>About Me</h1>
       <h3>Profile</h3>
       <p class="text">
-        balabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabala
+        With 10 years' C++/OOP experience, I offer technical support services to clients worldwide.
       </p>
       <h3>Skills</h3>
       <ul class="list">
@@ -15,17 +15,13 @@
         <li>Node.js, Java</li>
       </ul>
       <p  class="text">
-        balabalabalabala
-        balabalabalabalabalabalabalabalabalabalabalabalabalabalabalabal
-        balabalabalabalabalabalabalabalabalabalabalabalabalabalabalabal
-        balabalabalabalabalabalabalabalabalabalabalabalabalabalabalabal
-        balabalabalabalabalabalabalabalabalabalabalabalabalabalabalabal
-        balabalabalabalabalabalabalabalabalabalabalabalabalabalabalabal
+        Over the past 10 years, I've been involved in mobile industry, IVI, Oil, desktop software development and other fields. I've ever been employed by Tieto, Harman International, Qt and am working for AutoIO at the moment.
+	With strong knowledge in C++, C#, Qt, QML, Android, Java, Ruby, Python, Linux Shell Script, Embedded Linux system, Cross platform software design, Unit testing, Automatic testing, Continuous Integration, Agile development and other skills, I always provide my clients with the best services.
       </p>
       <h3>Contact Me</h3>
       <ul class="list">
-        <li><a href="http://weibo.com/2808915224" target="_blank">Sina</a></li>
-        <li><a href="https://github.com/Lee-Cloud" target="_blank">Gitbub</a></li>
+        <li><a href="https://www.linkedin.com/in/vito-ao-5006757b" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/victorsummer" target="_blank">Gitbub</a></li>
         <li>Wechat: victorsummer</li>
       </ul>
     </div>

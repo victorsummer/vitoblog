@@ -8,7 +8,7 @@
         <h3>The only thing standing between you and your dreams is ... reluctance.</h3>
         <p class="socials">
           <a href="https://github.com/victorsummer" target="_blank" class='icon github'></a>
-          <a href="https://www.linkedin.com/in/vito-ao5006757b" target="_blank" class='icon linkedin'></a>
+          <a href="https://www.linkedin.com/in/vito-ao-5006757b" target="_blank" class='icon linkedin'></a>
           <a href="https://twitter.com/ao_vito"  target="_blank" class='icon twitter'></a>
         </p>
       </div>
