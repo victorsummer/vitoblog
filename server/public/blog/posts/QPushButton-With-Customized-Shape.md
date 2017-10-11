@@ -9,8 +9,7 @@ If you happen to be looking for how to implement a round push button for your ap
 
 #include <QPushButton>
 
-class RoundButton : public QPushButton
-{
+class RoundButton : public QPushButton {
 public:
     explicit RoundButton(const QString &text, QWidget *parent = 0);
 
@@ -32,8 +31,7 @@ Then our header file should look like this.
 
 #include <QPushButton>
 
-class RoundButton : public QPushButton
-{
+class RoundButton : public QPushButton {
 public:
     explicit RoundButton(const QString &text, QWidget *parent = 0);
 
@@ -46,8 +44,7 @@ protected:
     void resizeEvent(QResizeEvent *event);
 
 private:
-    inline const bool &isHover() const
-    {
+    inline const bool &isHover() const {
         return mIsHover;
     }
 
@@ -61,14 +58,12 @@ private:
 * Let's take a look at the four protected functions one by one. In order to track if a mouse is hovering over our button, enterEvent and leaveEvent come to help.
 
 ```c++
-void RoundButton::enterEvent(QEvent *event)
-{
+void RoundButton::enterEvent(QEvent *event) {
     mIsHover = true;
     QPushButton::enterEvent(event);
 }
 
-void RoundButton::leaveEvent(QEvent *event)
-{
+void RoundButton::leaveEvent(QEvent *event) {
     mIsHover = false;
     QPushButton::leaveEvent(event);
 }
@@ -90,21 +85,15 @@ And don't forget to put them in the .qrc file.
 * Now we repaint our round buttons with different background images according to three different states, which are normal, hovering and pressed.
 
 ```c++
-void RoundButton::paintEvent(QPaintEvent *event)
-{
+void RoundButton::paintEvent(QPaintEvent *event) {
     Q_UNUSED(event)
     QPainter painter(this);
     painter.setRenderHint(QPainter::SmoothPixmapTransform, true);
-    if (isDown())
-    {
+    if (isDown()) {
         painter.drawImage(rect(), QImage(":/Image/Images/roundButtonPress.png"));
-    }
-    else if (isHover())
-    {
+    } else if (isHover()) {
         painter.drawImage(rect(), QImage(":/Image/Images/roundButtonHover.png"));
-    }
-    else
-    {
+    } else {
         painter.drawImage(rect(), QImage(":/Image/Images/roundButton.png"));
     }
 
@@ -116,13 +105,10 @@ void RoundButton::paintEvent(QPaintEvent *event)
     painter.setFont(font);
 
 
-    if (isDown())
-    {
+    if (isDown()) {
         QRectF rect = this->rect();
         painter.drawText(rect.translated(-1, -1), Qt::AlignCenter, this->text());
-    }
-    else
-    {
+    } else {
         painter.drawText(rect(), Qt::AlignCenter, this->text());
     }
 }
@@ -131,8 +117,7 @@ void RoundButton::paintEvent(QPaintEvent *event)
 * At last, we can restrain our working area to the round background image of the button.
 
 ```c++
-void RoundButton::resizeEvent(QResizeEvent *event)
-{
+void RoundButton::resizeEvent(QResizeEvent *event) {
     int side = qMin(width(), height());
     QRegion maskedRegion(width() / 2 - side / 2, height() / 2 - side / 2, side,
                          side, QRegion::Ellipse);
