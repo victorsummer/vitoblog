@@ -36,9 +36,10 @@ app.get('/api/blog/posts',function(req,res){
 		if(err){
 			console.error(err);
 		}
-		for (var i = 0; i < files.length; i++) {
-			posts.push({'title':path.basename(files[i],'.md'),'datetime':fs.statSync('./public/blog/posts/'+files[i]).mtime})
-		}
+                files.filter(function(file) { return file.substr(-3) === '.md'; })
+                .forEach(function(file) {
+                  posts.push({'title':path.basename(file,'.md'),'datetime':fs.statSync('./public/blog/posts/'+file).mtime})
+                });
 		posts.sort(function(a,b){
 			return b.datetime - a.datetime
 		})

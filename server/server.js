@@ -3,6 +3,10 @@ var app = express();
 var marked = require('marked');
 var fs = require('fs');
 var path = require('path');
+var serveStatic = require('serve-static');
+var history = require('connect-history-api-fallback');
+app.use(history());
+app.use(serveStatic(__dirname));
 marked.setOptions({
 	renderer: new marked.Renderer(),
 	gfm: true,
@@ -13,7 +17,7 @@ marked.setOptions({
 	smartLists: true,
 	smartypants: false
 });
-app.use(express.static('public',{maxAge:12*60*60*24*30}));
+app.use(express.static(__dirname + '/public',{maxAge:12*60*60*24*30}));
 app.all('*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     // res.header("Access-Control-Allow-Headers", "X-Requested-With");
@@ -32,9 +36,10 @@ app.get('/api/blog/posts',function(req,res){
 		if(err){
 			console.error(err);
 		}
-		for (var i = 0; i < files.length; i++) {
-			posts.push({'title':path.basename(files[i],'.md'),'datetime':fs.statSync('./public/blog/posts/'+files[i]).mtime})
-		}
+                files.filter(function(file) { return file.substr(-3) === '.md'; })
+                .forEach(function(file) {
+                  posts.push({'title':path.basename(file,'.md'),'datetime':fs.statSync('./public/blog/posts/'+file).mtime})
+                });
 		posts.sort(function(a,b){
 			return b.datetime - a.datetime
 		})
@@ -62,6 +67,6 @@ app.get('/api/blog/post/',function(req,res){
 app.get('/',function(req,res){
 	res.sendFile('/blog/index.html',{root: __dirname + '/public/'});
 });
-app.listen(3000, function() {
-  console.log('server is running at port 3000');
-});
+var port = process.env.PORT || 5000;
+app.listen(port);
+console.log('server started '+ port);
