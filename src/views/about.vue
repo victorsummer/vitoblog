@@ -23,6 +23,8 @@
         <li><a href="https://www.linkedin.com/in/vito-ao-5006757b" target="_blank">LinkedIn</a></li>
         <li><a href="https://github.com/victorsummer" target="_blank">Gitbub</a></li>
         <li>Wechat: victorsummer</li>
+        <li>Skype: walkaloneinrain@hotmail.com</li>
+        <li>Hangout/GTalk: victorsummer@gmail.com</li>
       </ul>
     </div>
   </div>
