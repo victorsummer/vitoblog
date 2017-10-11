@@ -2,7 +2,7 @@
   <div>
     <div class="about">
       <h1>About Me</h1>
-      <h3>Profile</h3>
+      <h3>Business Scope</h3>
       <p class="text">
         With 10 years' C++/OOP experience, I offer technical support services to clients worldwide.
       </p>
@@ -14,11 +14,12 @@
         <li>React Native</li>
         <li>Node.js, Java</li>
       </ul>
-      <p  class="text">
+      <p class="text">
         Over the past 10 years, I've been involved in mobile industry, Automotive, Oil, desktop software development and other fields. I've ever been employed by Tieto, Harman International, Qt and am working for AutoIO at the moment.
-	With strong knowledge in C/C++, C#, Qt/QML, Javascript, Android, Java, Ruby, Python, Linux Shell Script, Embedded Linux system, Cross platform software design, Unit testing, Automatic testing, Continuous Integration, Agile development and other skills, I always provide my clients with the best services.
+        
+        With strong knowledge in C/C++, C#, Qt/QML, Javascript, Android, Java, Ruby, Python, Linux Shell Script, Embedded Linux system, Cross platform software design, Unit testing, Automatic testing, Continuous Integration, Agile development and other skills, I always provide my clients with the best services.
       </p>
-      <h3>Contact Me</h3>
+      <h3>Contact Info</h3>
       <ul class="list">
         <li><a href="https://www.linkedin.com/in/vito-ao-5006757b" target="_blank">LinkedIn</a></li>
         <li><a href="https://github.com/victorsummer" target="_blank">Gitbub</a></li>
