@@ -2,7 +2,7 @@ Lots of Qt freshers asked me how to become a Qt master, since Qt is becoming mor
 
 Below I made a Qt learning roadmap for you to help you learn Qt systematically and become a master of the latest Qt technology.
 
-![](../public/blog/posts/QtMasterRoadmap.png)
+![](../../public/blog/posts/QtMasterRoadmap.png)
 
 You might need to omit some of the steps such as building Linux image with Yocto if you don't plan to work with embedded Linux.
 
