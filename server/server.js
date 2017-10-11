@@ -4,8 +4,8 @@ var marked = require('marked');
 var fs = require('fs');
 var path = require('path');
 var serveStatic = require('serve-static');
-var history = require('connect-history-api-fallback');
-app.use(history());
+//var history = require('connect-history-api-fallback');
+//app.use(history());
 app.use(serveStatic(__dirname));
 marked.setOptions({
 	renderer: new marked.Renderer(),
@@ -30,7 +30,7 @@ var formate = require('./datetime.js');//格式化日期
 
 /********************获取文章列表********************************/
 app.get('/api/blog/posts',function(req,res){
-  console.log("requesting all blogs........")
+  console.log("requesting all blogs....")
 	var posts = [];
   fs.readdir('./public/blog/posts',function(err,files){
 		if(err){
@@ -52,10 +52,12 @@ app.get('/api/blog/posts',function(req,res){
 /********************获取文章列表********************************/
 /********************获取文章详情********************************/
 app.get('/api/blog/post/',function(req,res){
+  console.log("requesting post...");
 	var post = {'Mtime':'','content':''};
   fs.readFile('./public/blog/posts/'+req.query.file, 'utf-8', function (err, data) {
   	if (err) throw err;
 		post.content = marked(data);
+                console.log('####: ' + post.content);
 		fs.stat('./public/blog/posts/'+req.query.file,function(err,stats){
 			if (err) throw err;
 			post.Mtime = formate(stats.mtime);
@@ -67,6 +69,6 @@ app.get('/api/blog/post/',function(req,res){
 app.get('/',function(req,res){
 	res.sendFile('/blog/index.html',{root: __dirname + '/public/'});
 });
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 3000;
 app.listen(port);
 console.log('server started '+ port);

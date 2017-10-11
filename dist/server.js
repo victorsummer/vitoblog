@@ -30,7 +30,6 @@ var formate = require('./datetime.js');//格式化日期
 
 /********************获取文章列表********************************/
 app.get('/api/blog/posts',function(req,res){
-  console.log("requesting all blogs........")
 	var posts = [];
   fs.readdir('./public/blog/posts',function(err,files){
 		if(err){
