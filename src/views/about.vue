@@ -15,8 +15,8 @@
         <li>Node.js, Java</li>
       </ul>
       <p  class="text">
-        Over the past 10 years, I've been involved in mobile industry, IVI, Oil, desktop software development and other fields. I've ever been employed by Tieto, Harman International, Qt and am working for AutoIO at the moment.
-	With strong knowledge in C++, C#, Qt, QML, Android, Java, Ruby, Python, Linux Shell Script, Embedded Linux system, Cross platform software design, Unit testing, Automatic testing, Continuous Integration, Agile development and other skills, I always provide my clients with the best services.
+        Over the past 10 years, I've been involved in mobile industry, Automotive, Oil, desktop software development and other fields. I've ever been employed by Tieto, Harman International, Qt and am working for AutoIO at the moment.
+	With strong knowledge in C/C++, C#, Qt/QML, Javascript, Android, Java, Ruby, Python, Linux Shell Script, Embedded Linux system, Cross platform software design, Unit testing, Automatic testing, Continuous Integration, Agile development and other skills, I always provide my clients with the best services.
       </p>
       <h3>Contact Me</h3>
       <ul class="list">
