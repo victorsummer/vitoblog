@@ -10,7 +10,7 @@
       <ul class="list">
         <li>Html, Javascript, CSS</li>
         <li>React, Vue, Angular</li>
-        <li>Qt, C++, C</li>
+        <li>Qt, C++, C, OpenGL ES</li>
         <li>React Native</li>
         <li>Node.js, Java</li>
       </ul>
