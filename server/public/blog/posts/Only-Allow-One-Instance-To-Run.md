@@ -8,7 +8,6 @@ If the shared memory has been created, just exit the application, otherwise, go 
 #include <QApplication>
 #include <QSystemSemaphore>
 #include <QSharedMemory>
-#include <QMessageBox>
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
@@ -17,15 +16,22 @@ int main(int argc, char *argv[]) {
 
     sema.acquire();
 
-    QSharedMemory mem("MY_APP_ID");
+    QSharedMemory unimem("MY_APP_ID");
 
-    if (!mem.create(1)) {
-        QMessageBox::information(0, "MY_APP Error","An instance has already been running.");
-        sema.release();
-        exit(0);
+    auto isRunning = false;
+    if (unimem.attach()) {
+        isRunning = true;
+    } else {
+        unimem.create(1);
+        isRunning = false;
     }
 
     sema.release();
+
+    if (isRunning) {
+        sema.release();
+        exit(0);
+    }
 
     // Put your application code here.
     // Code
