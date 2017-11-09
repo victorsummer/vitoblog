@@ -24,3 +24,5 @@ npm run deploy
 Please visit my website for intuitive feelings.
 https://www.vitosoda.com
 
+![Vito Blog](screenshots/vitoblog.png)
+
