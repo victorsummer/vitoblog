@@ -75,5 +75,6 @@ export default {
     width: 6px;
     height: 100%;
     background-color: #ddd;
+    font-size: 16px;
   }
 </style>
