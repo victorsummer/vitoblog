@@ -66,6 +66,7 @@ export default {
   div.post div.content blockquote > p{
     position: relative;
     overflow: visible;
+    font-size: 16px;
   }
   div.post div.content blockquote > p::after {
     content: '';
@@ -75,6 +76,5 @@ export default {
     width: 6px;
     height: 100%;
     background-color: #ddd;
-    font-size: 16px;
   }
 </style>
