@@ -59,10 +59,12 @@ export default {
     background-color: #eee;
     overflow-x: scroll;
     padding: 0.2rem 0.3rem;
+    font-size: 14px;
   }
   div.post div.content blockquote > p{
     position: relative;
     overflow: visible;
+    font-size: 14px;
   }
   div.post div.content blockquote > p::after {
     content: '';
