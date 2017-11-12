@@ -37,7 +37,8 @@ app.get('/api/blog/posts',function(req,res){
 		}
                 files.filter(function(file) { return file.substr(-3) === '.md'; })
                 .forEach(function(file) {
-                  posts.push({'title':path.basename(file,'.md'),'datetime':fs.statSync('./public/blog/posts/'+file).mtime})
+                  var datetime = fs.readFileSync('./public/blog/posts/Description/'+ file.substring(0, file.lastIndexOf(".")) + ".des", 'utf-8');
+                  posts.push({'title':path.basename(file,'.md'),'datetime':datetime});
                 });
 		posts.sort(function(a,b){
 			return b.datetime - a.datetime
