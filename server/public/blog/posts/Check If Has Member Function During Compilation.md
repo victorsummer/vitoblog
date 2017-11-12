@@ -1,7 +1,7 @@
 ### How do you statically check if a class contains a specified member function?
 
 Notice here we talk about 'statically', in other words, we're talking about checking during compilation instead of run time.
-SFINAE comes to my mind naturally when I was asked about this question.
+SFINAE came to my mind naturally when I was asked about this question.
 Take a look at http://en.cppreference.com/w/cpp/language/sfinae in case you're unfamiliar with SFINAE.
 
 ```c++
