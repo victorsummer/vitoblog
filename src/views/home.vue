@@ -40,7 +40,7 @@ export default {
 
 <style lang="css">
   div.post {
-    width: 10.5rem;
+    width: 12rem;
     margin: 0 auto;
     padding: 0.4rem 0.8rem;
     color: #666;
@@ -61,7 +61,8 @@ export default {
   div.post div.content pre {
     background-color: #eee;
     overflow-x: scroll;
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 160%;
   }
   div.post div.content blockquote > p{
     position: relative;

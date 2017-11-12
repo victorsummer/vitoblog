@@ -39,7 +39,7 @@ export default {
 
 <style lang="css" scoped>
   ul.posts {
-    width: 7.5rem;
+    width: 12rem;
     margin: 0 auto;
     padding: 0.4rem 0.8rem;
     list-style: none;
