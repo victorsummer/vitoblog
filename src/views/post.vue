@@ -37,7 +37,7 @@ export default {
 </script>
 <style lang="css" >
   div.post {
-    width: 7.5rem;
+    width: 10.5rem;
     margin: 0 auto;
     padding: 0.4rem 0.8rem;
     color: #666;
@@ -58,7 +58,6 @@ export default {
   div.post div.content pre {
     background-color: #eee;
     overflow-x: scroll;
-    padding: 0.1rem 0.1rem;
     font-size: 14px;
   }
   div.post div.content blockquote > p{
