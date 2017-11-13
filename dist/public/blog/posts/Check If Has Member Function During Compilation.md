@@ -20,9 +20,9 @@ struct ClassB {
 #define FUNCTION_CHECKER(funcName) \
 template <typename T> \
 struct has_##funcName { \
-    template <typename C> static uint_fast8_t test(decltype(&C::funcName)); \
-    template <typename C> static uint_fast16_t test(...); \
-    enum { value = sizeof(test<T>(0)) == sizeof(uint_fast8_t) }; \
+    template <typename C> static uint8_t test(decltype(&C::funcName)); \
+    template <typename C> static uint16_t test(...); \
+    enum { value = sizeof(test<T>(0)) == sizeof(uint8_t) }; \
 };
 
 FUNCTION_CHECKER(function1)
