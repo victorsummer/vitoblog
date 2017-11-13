@@ -57,13 +57,10 @@ app.get('/api/blog/post/',function(req,res){
 	var post = {'Mtime':'','content':''};
   fs.readFile('./public/blog/posts/'+req.query.file, 'utf-8', function (err, data) {
   	if (err) throw err;
-		post.content = marked(data);
-                console.log('####: ' + post.content);
-		fs.stat('./public/blog/posts/'+req.query.file,function(err,stats){
-			if (err) throw err;
-			post.Mtime = formate(stats.mtime);
-			res.send(post);
-		})
+	post.content = marked(data);
+        var datetime = fs.readFileSync('./public/blog/posts/Description/'+ req.query.file.substring(0, req.query.file.lastIndexOf(".")) + ".des", 'utf-8');
+        post.Mtime = formate(datetime);
+        res.send(post);
   });
 });
 /********************获取文章详情********************************/
