@@ -42,8 +42,8 @@ int main() {
 The construction order may be like this.
 1. Construct A on heap
 2. Construct B on heap
-3. Construct std::unique_ptr<A> on stack
-4. Construct std::unique_ptr<B> on stack
+3. Construct std::unique_ptr<A> typed temporary object
+4. Construct std::unique_ptr<B> typed temporary object
 
 If an exception happens while step 2, A is leaked as the same as above.
 
@@ -57,10 +57,10 @@ int main() {
 ```
 
 The construction order may be like this then.
-1. Function std::make_unique<A> is called, A is constructed and std::unique_ptr<A> is constructed
-2. Function std::make_unique<B> is called, and B is constructed, std::unique_ptr<B> is constructed
+1. Function std::make_unique<A> is called, A is constructed, a std::unique_ptr<A> typed temporary object is constructed
+2. Function std::make_unique<B> is called, B is constructed, a std::unique_ptr<B> typed temporary object is constructed
 
-If an exception happens when calling std::make_unique<B>, std::unique_ptr<A> as a temporary variable on stack will be cleaned up automatically, no leak at all.
+If an exception happens when calling std::make_unique<B>, std::unique_ptr<A> typed temporary object will be cleaned up automatically, no leak at all.
 
 Though we prefer std::make_unique and std::make_shared, there are exceptions.
 
