@@ -41,7 +41,7 @@ app.get('/api/blog/posts',function(req,res){
                   posts.push({'title':path.basename(file,'.md'),'datetime':datetime});
                 });
 		posts.sort(function(a,b){
-			return b.datetime - a.datetime
+			return Date.parse(b.datetime) - Date.parse(a.datetime)
 		})
 		for (var j = 0; j < posts.length; j++){
 			posts[j].datetime = formate(posts[j].datetime)
