@@ -45,7 +45,7 @@ export default {
     padding: 0.4rem 0.8rem;
     color: #666;
     line-height: 200%;
-    text-align: justify;
+    text-align: left;
   }
   div.post > h3.post-title {
     text-align: center;

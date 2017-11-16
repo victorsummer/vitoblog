@@ -63,7 +63,7 @@ export default {
     line-height: 200%;
     text-indent: 40px;
     color: #555;
-    text-align: justify;
+    text-align: left;
   }
   div.about > ul.list {
     padding-left: 0.4rem;
