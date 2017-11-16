@@ -1,4 +1,4 @@
-### Why should we always prefer std::make_shared and std::make_unique to std::share_ptr and std::unique_ptr from raw new allocation?
+### Why should we always prefer std::make_shared and std::make_unique to creating std::share_ptr and std::unique_ptr from raw new allocation?
 
 There's no std::make_unique until C++14, but it is easy to implement one according to http://en.cppreference.com/w/cpp/memory/unique_ptr/make_unique.
 
