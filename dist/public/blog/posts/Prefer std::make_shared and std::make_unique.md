@@ -8,7 +8,7 @@ std::unique_ptr<T> make_unique(Args&&... args) {
     return std::unique_ptr<T>(new T(std::forward<Args>(args)...));
 }
 ```
-It is well known that std::make_unique is more efficient than creating std::share_ptr from aw new allocation. Though std::make_unique does NOT take that advantage.
+It is well known that std::make_shared is more efficient than creating std::share_ptr from aw new allocation. Though std::make_unique does NOT take that advantage.
 
 Besides the performance consideration, we have two more reasons to prefer these two std::make_ allocations. One is to avoid explicit new, which is greatly encouraged by the modern C++11. And the other is somewhat tricky, std::make_ allocations are solutions to avoid exception safety issues, let's figure out why.
 
