@@ -23,7 +23,7 @@ Basic steps for the usage of the signal & slot mechanism is easy as follows.
 1. Call QObject::connect to build a connection between a signal and a slot.
 2. Emit the signal and expect a call to the slot.
 
-Firstly, QObject::connect get the index of the signal with the help of MOS introspection, call QMetaObjectPrivate::connect with the signal index.
+Firstly, QObject::connect gets the index of the signal with the help of MOS introspection, and calls QMetaObjectPrivate::connect with the signal index.
 
 ```c++
 QMetaObject::Connection QObject::connect(const QObject *sender, const char *signal,
@@ -44,7 +44,7 @@ QMetaObject::Connection QObject::connect(const QObject *sender, const char *sign
     return handle;
 }
 ```
-Unlike C++ templates signal, Qt doesn't store the callbacks while building a connection, instead, QMetaObjectPrivate::connect obtains the slot method index and offset, then add all information as a QObjectPrivate::Connection struct into the signal related ConnectionList. For one object, there might be more than one signals, so QObject has a vector container called ConnectionListVector to store the all their ConnectionList.
+Unlike C++ templates signal, Qt doesn't store the callbacks while building a connection, instead, QMetaObjectPrivate::connect obtains the slot method index and offset, then adds all information as a QObjectPrivate::Connection struct into the signal related ConnectionList. For one object, there might be more than one signals, so QObject has a vector container called ConnectionListVector to store the all their ConnectionList.
 
 ```c++
 QObjectPrivate::Connection *QMetaObjectPrivate::connect(const QObject *sender,
