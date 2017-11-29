@@ -71,7 +71,7 @@ QObjectPrivate::Connection *QMetaObjectPrivate::connect(const QObject *sender,
     return c.take();
 }
 ```
-When a signal is emitted, QMetaObject::activate will be called, and again with the help of MOS, Qt get the slot function address and call it, assuming the connection type is not Qt::QueuedConnection, which will be sent to the event loop, waiting to be called in a queue.
+When a signal is emitted, QMetaObject::activate will be called, and again with the help of MOS, Qt gets the slot function address and calls it, assuming the connection type is not Qt::QueuedConnection, in which case, the slot will be sent to the event loop, waiting to be called in a queue.
 ```c++
 void QMetaObject::activate(QObject *sender, int signalOffset, int local_signal_index, void **argv)
 {
