@@ -44,7 +44,7 @@ QMetaObject::Connection QObject::connect(const QObject *sender, const char *sign
     return handle;
 }
 ```
-Unlike C++ templates signal, Qt doesn't store the callbacks while building a connection, instead, QMetaObjectPrivate::connect obtains the slot method index and offset, then add all information as a QObjectPrivate::Connection struct into the signal related ConnectionList. For one object, there might be more than one signals, so QObject has a vector container to store the all their ConnectionList.
+Unlike C++ templates signal, Qt doesn't store the callbacks while building a connection, instead, QMetaObjectPrivate::connect obtains the slot method index and offset, then add all information as a QObjectPrivate::Connection struct into the signal related ConnectionList. For one object, there might be more than one signals, so QObject has a vector container called ConnectionListVector to store the all their ConnectionList.
 
 ```c++
 QObjectPrivate::Connection *QMetaObjectPrivate::connect(const QObject *sender,
@@ -71,7 +71,7 @@ QObjectPrivate::Connection *QMetaObjectPrivate::connect(const QObject *sender,
     return c.take();
 }
 ```
-When a signal is emitted, QMetaObject::activate will be called, and again the help of MOS, Qt get the slot function address and call it, assuming the connection type is not Qt::QueuedConnection, which will be sent to the event loop, waiting to be called in a queue.
+When a signal is emitted, QMetaObject::activate will be called, and again with the help of MOS, Qt get the slot function address and call it, assuming the connection type is not Qt::QueuedConnection, which will be sent to the event loop, waiting to be called in a queue.
 ```c++
 void QMetaObject::activate(QObject *sender, int signalOffset, int local_signal_index, void **argv)
 {
