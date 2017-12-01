@@ -44,7 +44,7 @@ QMetaObject::Connection QObject::connect(const QObject *sender, const char *sign
     return handle;
 }
 ```
-Unlike C++ templates signal, Qt doesn't store the callbacks while building a connection, instead, QMetaObjectPrivate::connect obtains the slot method index and offset, then adds all information as a QObjectPrivate::Connection struct into the signal related ConnectionList. For one object, there might be more than one signals, so QObject has a vector container called ConnectionListVector to store the all their ConnectionList.
+Unlike C++ templates signal, Qt doesn't store the callbacks while building a connection, instead, QMetaObjectPrivate::connect obtains the slot method index and offset, then adds all information as a QObjectPrivate::Connection struct into the signal related ConnectionList. For one object, there might be more than one signal, so QObject has a vector container called ConnectionListVector to store the all their ConnectionLists.
 
 ```c++
 QObjectPrivate::Connection *QMetaObjectPrivate::connect(const QObject *sender,
